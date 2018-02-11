@@ -3,6 +3,8 @@ package models;
 import models.agents.Agent;
 import models.agents.Goal;
 import models.agents.Problem;
+import models.agents.State;
+import models.environments.Environment;
 import models.graphs.Graph;
 import models.graphs.Node;
 import models.trees.Tree;
@@ -18,34 +20,21 @@ import java.util.List;
 public class GraphProblem extends Problem{
 
 
-    private Agent agent;
-    private Tree tree;
+    private Graph graph;
 
-    public GraphProblem(GraphState initialState, Agent agent) {
-        super(initialState);
-        this.agent = agent;
-        addAction(new MoveToAction(null));
+    public GraphProblem(State initialState, Goal goal, Graph graph) {
+        super(initialState, goal);
+        this.graph = graph;
     }
 
-    private void buildTree(){
-        Graph graph = ((GraphState) initialEnvironmentState).getGraph();
-        List<Node> ancestors = new ArrayList<>();
-        ancestors.add(((GraphState) initialEnvironmentState).getAgentLocation(agent));
-        TreeNode root = TreeService.generateTreeFromGraph(graph,
-                ((GraphState) initialEnvironmentState).getAgentLocation(agent),
-                ancestors,
-                0,
-                0);
-        tree = new Tree(root);
-    }
 
     @Override
-    public Object Successors(Object o) {
-        return super.Successors(o);
-    }
-
-    @Override
-    public boolean testGoal(Goal goal) {
-        return ((GraphState) initialEnvironmentState).getAgentLocation(agent).equals(goal.getGoal());
+    public List<State> applySuccessionFunction(State state) {
+        Node node = graph.getNode(state);
+        List<State> successors = new ArrayList<>();
+        for(Node n :node.getNeighbours().keySet()){
+            successors.add(n.getState());
+        }
+        return successors;
     }
 }

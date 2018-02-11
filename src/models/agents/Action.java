@@ -5,20 +5,31 @@ package models.agents;
  */
 public class Action {
 
-    private String name;
+    protected State start, end;
 
-    public String getName() {
-        return name;
+    public Action(State start, State end) {
+        this.start = start;
+        this.end = end;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public State execute(){
         return null;
     }
-    public String toString(){
-        return name;
+
+    public State getStart() {
+        return start;
+    }
+
+    public void setStart(State start) {
+        this.start = start;
+    }
+
+    public State getEnd() {
+        return end;
+    }
+
+    public void setEnd(State end) {
+        this.end = end;
     }
 }

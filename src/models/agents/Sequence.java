@@ -9,19 +9,19 @@ import java.util.List;
  */
 public class Sequence {
 
-    private List<Successor> sequence;
+    private List<Action> sequence;
 
     public Sequence(){
         sequence = new ArrayList<>();
     }
 
-    public Sequence(List<Successor> sequence) {
+    public Sequence(List<Action> sequence) {
         this.sequence = sequence;
     }
 
-    public Successor next(State state){
-        for(Successor p : sequence){
-            if(p.getInitialState().equals(state))return p;
+    public Action next(State state){
+        for(Action a : sequence){
+            if(a.getStart().equals(state))return a;
         }
         return null;
     }
@@ -30,12 +30,12 @@ public class Sequence {
     public void update(State state){
         int last_index = 0;
         for(int i =0; i<sequence.size();i++){
-            if(sequence.get(i).getInitialState().equals(state))last_index = i;
+            if(sequence.get(i).getStart().equals(state))last_index = i;
         }
         sequence = sequence.subList(last_index,sequence.size()-1);
     }
 
-    public Successor goToNext(){
+    public Action goToNext(){
         sequence.remove(0);
         return sequence.get(0);
     }

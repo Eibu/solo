@@ -2,6 +2,8 @@ package models;
 
 import models.agents.Action;
 import models.agents.Agent;
+import models.agents.State;
+import models.environments.Environment;
 import models.graphs.Node;
 
 /**
@@ -9,21 +11,16 @@ import models.graphs.Node;
  */
 public class MoveToAction extends Action {
 
-    private Node destination;
 
-    public MoveToAction(Node destination) {
-        this.destination = destination;
+    public MoveToAction(State start, State end) {
+        super(start, end);
     }
 
-    public void setDestination(Node destination){
-        this.destination = destination;
-    }
-
-    public void execute(Agent agent, GraphState state){
-        if(destination==null){
-            System.out.println("The node has not been set.");
+    public void execute(Agent agent, GraphEnvironment env ){
+        if(end==null){
+            System.out.println("The destination has not been set.");
         }else {
-            state.setAgentLocation(agent, destination);
+            env.setAgentLocation(agent, end);
         }
     }
 }

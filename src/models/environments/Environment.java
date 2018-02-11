@@ -2,6 +2,7 @@ package models.environments;
 
 import models.agents.Agent;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -9,35 +10,27 @@ import java.util.List;
  */
 public class Environment {
 
-    private List<Agent> agents;
-    private EnvironmentState environmentState;
+    protected HashMap<Agent,Object> agentProperties;
+    protected HashMap<String,Object> properties;
 
-    public Environment(List<Agent> agents, EnvironmentState environmentState) {
-        this.agents = agents;
-        this.environmentState = environmentState;
+    public Environment() {
+        agentProperties = new HashMap<>();
+        properties = new HashMap<>();
     }
 
-    public List<Agent> getAgents() {
-        return agents;
+    public HashMap<Agent, Object> getAgentProperties() {
+        return agentProperties;
     }
 
-    public void setAgents(List<Agent> agents) {
-        this.agents = agents;
+    public void setAgentProperties(HashMap<Agent, Object> agentProperties) {
+        this.agentProperties = agentProperties;
     }
 
-    public void addAgent(Agent agent){
-        this.agents.add(agent);
+    public HashMap<String, Object> getProperties() {
+        return properties;
     }
 
-    public void removeAgent(Agent agent){
-        this.agents.remove(agent);
-    }
-
-    public EnvironmentState getEnvironmentState() {
-        return environmentState;
-    }
-
-    public void setEnvironmentState(EnvironmentState environmentState) {
-        this.environmentState = environmentState;
+    public void setProperties(HashMap<String, Object> properties) {
+        this.properties = properties;
     }
 }

@@ -1,5 +1,7 @@
 package models.agents;
 
+import models.trees.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,21 +11,22 @@ import java.util.List;
 public class Problem {
 
     protected State initialState;
-    protected List<Action> actions;
-    protected List<Successor> successors;
     protected double pathCost;
     protected Goal goal;
 
     public Problem(State initialState, Goal goal) {
         this.initialState = initialState;
-        actions = new ArrayList<>();
         pathCost = 0;
         this.goal = goal;
     }
 
-    public void applySuccessionFunction(){
-        //uses initialState to generate the successors (root percepts of each sequence)
+    public List<State> applySuccessionFunction(State state){
+        //uses initialState to generate the successors
+
+
+        return null;
     }
+
 
 
     public boolean testGoal(State test){
@@ -39,8 +42,11 @@ public class Problem {
         return pathCost;
     }
 
-    public void addAction(Action action){
-        actions.add(action);
+    public State getInitialState() {
+        return initialState;
     }
 
+    public void setInitialState(State initialState) {
+        this.initialState = initialState;
+    }
 }

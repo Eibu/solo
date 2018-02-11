@@ -1,5 +1,7 @@
 package models.graphs;
 
+import models.agents.State;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,13 @@ public class Graph {
     public Node getNode(String name){
         for(Node node : nodes){
             if(node.getName().equals(name)) return node;
+        }
+        return null;
+    }
+
+    public Node getNode(State state){
+        for(Node n : nodes){
+            if(n.getState().equals(state))return n;
         }
         return null;
     }

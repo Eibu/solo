@@ -1,5 +1,7 @@
 package models.graphs;
 
+import models.agents.State;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,11 +12,13 @@ import java.util.List;
 public class Node {
 
     private String name;
+    private State state;
     private HashMap<Node,Double> neighbours;
 
     public Node(String name) {
         this.name = name;
         neighbours = new HashMap<>();
+        state = new State(name);
     }
 
     public String getName() {
@@ -40,5 +44,13 @@ public class Node {
 
     public boolean equals(Node node){
         return name.equals(node.name);
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 }
