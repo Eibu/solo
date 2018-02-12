@@ -6,6 +6,7 @@ import models.agents.State;
 
 /**
  * Created by Florian on 06/02/2018.
+ * Moves the agent to the end State if possible
  */
 public class MoveToAction extends Action {
 

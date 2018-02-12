@@ -7,6 +7,7 @@ import models.graphs.Graph;
 
 /**
  * Created by Florian on 11/02/2018.
+ * An environment with a quick access to its graph property
  */
 public class GraphEnvironment extends Environment {
 

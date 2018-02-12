@@ -36,7 +36,7 @@ public class Agent {
             recommends();
             updateSequence();
         }while(!problem.testGoal(state) );
-        System.out.println("AGENT - Goal achieved");
+        System.out.println("AGENT - Goal achieved with a cost of "+problem.getPathCost());
     }
 
 
@@ -45,7 +45,6 @@ public class Agent {
     protected void formulateGoal(){
         //uses state to obtain a goal
         System.out.println("AGENT - goal is generated");
-        //goal = new Goal("Bucharest",new State("Bucharest"));
     }
 
     protected void formulateProblem(){

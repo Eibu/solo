@@ -7,6 +7,7 @@ import models.strategies.Strategy;
 
 /**
  * Created by Florian on 11/02/2018.
+ * Just an agent who creates GraphProblems
  */
 public class TravelerAgent extends Agent {
 

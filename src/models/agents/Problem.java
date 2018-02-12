@@ -34,9 +34,8 @@ public class Problem {
         return pathCost;
     }
 
-    public double increasePathCost(double growth){
+    public void increasePathCost(double growth){
         pathCost+=growth;
-        return pathCost;
     }
 
     public State getInitialState() {

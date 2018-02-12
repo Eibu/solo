@@ -9,6 +9,7 @@ import java.util.HashMap;
 
 /**
  * Created by Florian on 06/02/2018.
+ * Run through the graph to obtain the connected states and their cost of the given state
  */
 public class GraphProblem extends Problem{
 
@@ -18,13 +19,13 @@ public class GraphProblem extends Problem{
 
     @Override
     public HashMap<State,Double> applySuccessionFunction(State state) {
-        //System.out.println("PROBLEM - Obtaining successors...");
+
         Node node = GraphEnvironment.getInstance(null).getGraph().getNode(state);
+
         HashMap<State,Double> successors = new HashMap<>();
         for(Node n :node.getNeighbours().keySet()){
             successors.put(n.getState(),node.getNeighbours().get(n));
         }
-        //System.out.println("PROBLEM - Obtaining successors done.");
         return successors;
     }
 }
