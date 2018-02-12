@@ -15,16 +15,13 @@ public class Main {
     public static void main(String[] args){
         Graph graph = GraphPopulator.populate();
         GraphEnvironment env = GraphEnvironment.getInstance(graph);
-        State arad = graph.getNode("Arad").getState();
-        State bucharest = graph.getNode("Bucharest").getState();
+        State start = graph.getNode("Arad").getState();
+        State goal = graph.getNode("Neamt").getState();
         Strategy strategy = new Breadth_firstStrategy();
-        TravelerAgent agent = new TravelerAgent("Guinea pig",arad,strategy,new Goal("Bucharest",bucharest));
+        TravelerAgent agent = new TravelerAgent("Guinea pig",start,strategy,new Goal("Neamt",goal));
         env.addAgent(agent);
-        env.setAgentLocation(agent,arad);
+        env.setAgentLocation(agent,start);
         agent.run();
-        //Node start = graph.getNode("Arad");
-        //List<Node> ancestors = new ArrayList<>();
-        //ancestors.add(start);
-        //TreeNode tree = TreeService.generateTreeFromGraph(graph,start,ancestors,0,0);
+
     }
 }

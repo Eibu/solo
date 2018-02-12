@@ -5,8 +5,7 @@ import models.agents.Problem;
 import models.agents.State;
 import models.graphs.Node;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 /**
  * Created by Florian on 06/02/2018.
@@ -18,12 +17,12 @@ public class GraphProblem extends Problem{
     }
 
     @Override
-    public List<State> applySuccessionFunction(State state) {
+    public HashMap<State,Double> applySuccessionFunction(State state) {
         //System.out.println("PROBLEM - Obtaining successors...");
         Node node = GraphEnvironment.getInstance(null).getGraph().getNode(state);
-        List<State> successors = new ArrayList<>();
+        HashMap<State,Double> successors = new HashMap<>();
         for(Node n :node.getNeighbours().keySet()){
-            successors.add(n.getState());
+            successors.put(n.getState(),node.getNeighbours().get(n));
         }
         //System.out.println("PROBLEM - Obtaining successors done.");
         return successors;
