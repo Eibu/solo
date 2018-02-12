@@ -3,7 +3,7 @@ import models.TravelerAgent;
 import models.agents.Goal;
 import models.agents.State;
 import models.graphs.Graph;
-import models.strategies.Breadth_firstStrategy;
+import models.strategies.UniformCostStrategy;
 import models.strategies.Strategy;
 import populators.GraphPopulator;
 
@@ -16,11 +16,11 @@ public class Main {
         Graph graph = GraphPopulator.populate();
         GraphEnvironment env = GraphEnvironment.getInstance(graph);
 
-        String goal_name = "Zerind";
+        String goal_name = "Bucharest";
         State start = graph.getNode("Arad").getState();
         State goal = graph.getNode(goal_name).getState();
 
-        Strategy strategy = new Breadth_firstStrategy();
+        Strategy strategy = new UniformCostStrategy();
         TravelerAgent agent = new TravelerAgent("Guinea pig",start,strategy,new Goal(goal_name,goal));
 
         env.addAgent(agent);

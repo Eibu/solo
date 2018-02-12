@@ -1,5 +1,6 @@
 package models.agents;
 
+import models.strategies.SearchAlgorithm;
 import models.strategies.Strategy;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class Agent {
     protected State state;
     protected Goal goal;
     protected Problem problem;
-    protected Strategy strategy;
+    protected SearchAlgorithm search;
 
 
     public Agent(String id, State state, Strategy strategy, Goal goal) {
@@ -23,7 +24,7 @@ public class Agent {
         this.sequence = new ArrayList<>();
         this.state = state;
         this.goal = goal;
-        this.strategy = strategy;
+        this.search= new SearchAlgorithm(strategy);
     }
 
     public void run(){
@@ -56,7 +57,7 @@ public class Agent {
     private void search(){
         //uses problem to get a sequence
         System.out.println("AGENT - Initiate research...");
-        sequence = strategy.run(problem);
+        sequence = search.run(problem);
         System.out.println("AGENT - research done.");
     }
 

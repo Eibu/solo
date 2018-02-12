@@ -1,6 +1,6 @@
 package models.agents;
 
-import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Florian on 06/02/2018.
@@ -17,13 +17,19 @@ public class Problem {
         this.goal = goal;
     }
 
-    public HashMap<State,Double> applySuccessionFunction(State state){
-        //uses initialState to generate the successors
-
+    public List<Action> getActions(State state){
         return null;
     }
 
 
+    public State SuccessorFn(State state, Action action){
+
+        return null;
+    }
+
+    public double getCost(State s1, Action action, State s2){
+        return 0;
+    }
 
     public boolean testGoal(State test){
         //System.out.println("PROBLEM - Testing goal");
