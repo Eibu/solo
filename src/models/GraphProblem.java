@@ -19,13 +19,13 @@ public class GraphProblem extends Problem{
 
     @Override
     public List<State> applySuccessionFunction(State state) {
-        System.out.println("PROBLEM - Obtaining successors...");
+        //System.out.println("PROBLEM - Obtaining successors...");
         Node node = GraphEnvironment.getInstance(null).getGraph().getNode(state);
         List<State> successors = new ArrayList<>();
         for(Node n :node.getNeighbours().keySet()){
             successors.add(n.getState());
         }
-        System.out.println("PROBLEM - Obtaining successors done.");
+        //System.out.println("PROBLEM - Obtaining successors done.");
         return successors;
     }
 }

@@ -27,7 +27,7 @@ public class Problem {
 
 
     public boolean testGoal(State test){
-        System.out.println("PROBLEM - Testing goal");
+        //System.out.println("PROBLEM - Testing goal");
         return goal.getGoal().equals(test);
     }
 
