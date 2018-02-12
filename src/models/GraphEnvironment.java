@@ -10,9 +10,17 @@ import models.graphs.Graph;
  */
 public class GraphEnvironment extends Environment {
 
-    public GraphEnvironment(Graph graph) {
+    private static GraphEnvironment instance = null;
+
+
+    private GraphEnvironment(Graph graph) {
         super();
         properties.put("graph",graph);
+    }
+
+    public static GraphEnvironment getInstance(Graph graph){
+        if(instance == null) instance = new GraphEnvironment(graph);
+        return instance;
     }
 
 
@@ -26,5 +34,9 @@ public class GraphEnvironment extends Environment {
 
     public State getAgentLocation(Agent agent){
         return (State) agentProperties.get(agent);
+    }
+
+    public Graph getGraph(){
+        return (Graph) properties.get("graph");
     }
 }

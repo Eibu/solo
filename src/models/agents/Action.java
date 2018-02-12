@@ -13,8 +13,7 @@ public class Action {
     }
 
 
-    public State execute(){
-        return null;
+    public void execute(Agent agent){
     }
 
     public State getStart() {

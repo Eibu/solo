@@ -10,12 +10,12 @@ import java.util.List;
  */
 public class Agent {
 
-    private String id;
-    private List<Action> sequence;
-    private State state;
-    private Goal goal;
-    private Problem problem;
-    private Strategy strategy;
+    protected String id;
+    protected List<Action> sequence;
+    protected State state;
+    protected Goal goal;
+    protected Problem problem;
+    protected Strategy strategy;
 
 
     public Agent(String id, State state, Strategy strategy, Goal goal) {
@@ -27,42 +27,51 @@ public class Agent {
     }
 
     public void run(){
-        if(sequence.size()<1){
-            formulateGoal();
-            formulateProblem();
-            search();
-        }
-        recommends();
-        updateSequence();
+        do {
+            if (sequence.size() < 1) {
+                formulateGoal();
+                formulateProblem();
+                search();
+            }
+            recommends();
+            updateSequence();
+        }while(!problem.testGoal(state));
+        System.out.println("AGENT - Goal achieved");
     }
 
 
 
 
-    private void formulateGoal(){
+    protected void formulateGoal(){
         //uses state to obtain a goal
-        goal = new Goal("Bucharest",new State("Bucharest"));
+        System.out.println("AGENT - goal is generated");
+        //goal = new Goal("Bucharest",new State("Bucharest"));
     }
 
-    private void formulateProblem(){
+    protected void formulateProblem(){
         //uses environmentState and goal to obtain a problem
-        problem = new Problem(new State("Arad"), goal);
+        System.out.println("AGENT - Problem is generated");
+        problem = new Problem(state, goal);
     }
 
     private void search(){
         //uses problem to get a sequence
-        if(problem.testGoal(state));
+        System.out.println("AGENT - Initiate research...");
         sequence = strategy.run(problem);
+        System.out.println("AGENT - research done.");
     }
 
     private void recommends(){
         //uses sequence and state to choose an action
-        Action action = sequence.get(1);
+        System.out.println("AGENT - Recommended action executed");
+        Action action = sequence.get(0);
+        action.execute(this);
 
     }
 
     private void updateSequence(){
         //uses sequence and state to update sequence
+        System.out.println("Updating objective list");
         if(sequence.size()>0) {
             if (sequence.get(0).getStart().equals(state)) {
                 sequence.remove(0);

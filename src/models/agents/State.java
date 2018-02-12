@@ -41,4 +41,10 @@ public class State {
         return name != null ? name.equals(state.name) : state.name == null;
     }
 
+    @Override
+    public String toString() {
+        return "State{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

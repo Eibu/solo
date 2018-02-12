@@ -1,8 +1,5 @@
 package models.agents;
 
-import models.trees.TreeNode;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,6 +27,7 @@ public class Problem {
 
 
     public boolean testGoal(State test){
+        System.out.println("PROBLEM - Testing goal");
         return goal.getGoal().equals(test);
     }
 
