@@ -21,9 +21,14 @@ public class MoveToAction extends Action {
         if(end==null){
             System.out.println("The destination has not been set.");
         }else {
-            System.out.println("ACTION - The agent "+agent.getId()+" has moved from "+start.getName() +" to "+end.getName());
-            GraphEnvironment.getInstance(null).setAgentLocation(agent, end);
-            agent.setState(end);
+            if(agent.getState().equals(start)) {
+                System.out.println("ACTION - The agent " + agent.getId() + " has moved from \"" + start.getName() + "\" to \"" + end.getName()+"\"");
+                GraphEnvironment.getInstance(null).setAgentLocation(agent, end);
+                agent.setState(end);
+            }else {
+                System.out.println("ACTION - preconditions are not respected : \nAgent "+agent.getId()+" is currently at \""+agent.getState().getName()+ "\" it has to move to \""+start.getName()+"\" first !");
+                
+            }
         }
     }
 }

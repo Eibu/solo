@@ -2,38 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beda27c3-13f1-44cb-9620-c49a5834555e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/TravelerAgent.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/models/GraphAgent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/models/GraphState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/models/NodeGoal.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/models/environments/State.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/models/trees/Tree.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/models/trees/TreeNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/solo/services/TreeService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/GraphAgent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/NodeGoal.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/models/agents/Successor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/services/TreeService.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/Main.class" afterPath="$PROJECT_DIR$/out/production/solo/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/GraphProblem.class" afterPath="$PROJECT_DIR$/out/production/solo/models/GraphProblem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/MoveToAction.class" afterPath="$PROJECT_DIR$/out/production/solo/models/MoveToAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/agents/Action.class" afterPath="$PROJECT_DIR$/out/production/solo/models/agents/Action.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/agents/Agent.class" afterPath="$PROJECT_DIR$/out/production/solo/models/agents/Agent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/agents/Problem.class" afterPath="$PROJECT_DIR$/out/production/solo/models/agents/Problem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/agents/Sequence.class" afterPath="$PROJECT_DIR$/out/production/solo/models/agents/Sequence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/environments/Environment.class" afterPath="$PROJECT_DIR$/out/production/solo/models/environments/Environment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/graphs/Graph.class" afterPath="$PROJECT_DIR$/out/production/solo/models/graphs/Graph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/graphs/Node.class" afterPath="$PROJECT_DIR$/out/production/solo/models/graphs/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/solo/models/strategies/Strategy.class" afterPath="$PROJECT_DIR$/out/production/solo/models/strategies/Strategy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GraphEnvironment.java" afterPath="$PROJECT_DIR$/src/models/GraphEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/GraphProblem.java" afterPath="$PROJECT_DIR$/src/models/GraphProblem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/MoveToAction.java" afterPath="$PROJECT_DIR$/src/models/MoveToAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/agents/Action.java" afterPath="$PROJECT_DIR$/src/models/agents/Action.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/agents/Agent.java" afterPath="$PROJECT_DIR$/src/models/agents/Agent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/agents/Problem.java" afterPath="$PROJECT_DIR$/src/models/agents/Problem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/agents/State.java" afterPath="$PROJECT_DIR$/src/models/agents/State.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java" afterPath="$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/agents/Agent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+            <state relative-caret-position="391">
+              <caret line="47" column="7" lean-forward="false" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveToAction.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MoveToAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/MoveToAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            <state relative-caret-position="342">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,8 +58,8 @@
       <file leaf-file-name="Breadth_firstStrategy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="76" column="22" lean-forward="false" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+            <state relative-caret-position="465">
+              <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/models/agents/Problem.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/models/agents/State.java" />
-        <option value="$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java" />
         <option value="$PROJECT_DIR$/src/models/agents/Action.java" />
-        <option value="$PROJECT_DIR$/src/models/agents/Agent.java" />
+        <option value="$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java" />
         <option value="$PROJECT_DIR$/src/models/MoveToAction.java" />
+        <option value="$PROJECT_DIR$/src/models/agents/Agent.java" />
       </list>
     </option>
   </component>
@@ -862,12 +833,12 @@
       <workItem from="1518042863746" duration="109000" />
       <workItem from="1518043175143" duration="1006000" />
       <workItem from="1518271425090" duration="2692000" />
-      <workItem from="1518358935520" duration="26134000" />
+      <workItem from="1518358935520" duration="30025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63753000" />
+    <option name="totallyTimeSpent" value="67644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -882,9 +853,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18330605" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17184943" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26928896" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
@@ -916,7 +887,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/models/MoveToAction.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1333,16 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="76" column="22" lean-forward="false" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/agents/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1369,10 +1338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/agents/Agent.java">
+    <entry file="file://$PROJECT_DIR$/src/models/strategies/Breadth_firstStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        <state relative-caret-position="465">
+          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1381,9 +1350,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/MoveToAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="342">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/agents/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="47" column="7" lean-forward="false" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -6,6 +6,7 @@ import models.agents.Problem;
 import models.agents.State;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -52,36 +53,31 @@ public class Breadth_firstStrategy extends Strategy{
     }
 
     private List<Action> buildSolution(State last){
+        System.out.println("STRATEGY - Compiling solution...");
         String str = "STRATEGY - Solution : \n";
         List<Action> solution = new ArrayList<>();
         State current = last;
         boolean found = false;
-        //System.out.println(current.getName()+" - - "+memory.get(0).size()+" - - ");
         while(current != null){
-            //System.out.println(current.getName());
             found = false;
             str =str+current.getName() +" - ";
             for(int i = memory.size()-1; i>=0 && !found ; i--){
                 List<Object> mem = memory.get(i);
                 State s = (State)mem.get(1);
-                //System.out.println(s.getName()+" - "+current.getName()+" - "+current.getName().equals(s.getName()));
                 if(s != null) {
-                    //System.out.println("not null : "+s.getName()+" - "+current.getName());
                     if (current.getName().equals(s.getName())) {
-                        System.out.println("match found " + mem.get(0));
                         found = true;
                         solution.add((Action) mem.get(2));
                         current = (State) mem.get(0);
                     }
                 }else{
-                    //System.out.println("null found");
                     found = true;
                     current = null;
                 }
             }
         }
-        System.out.println("STRATEGY - Compiling solution...");
         System.out.println(str);
+        Collections.reverse(solution);
         return solution;
     }
 

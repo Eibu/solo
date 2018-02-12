@@ -35,7 +35,7 @@ public class Agent {
             }
             recommends();
             updateSequence();
-        }while(!problem.testGoal(state));
+        }while(!problem.testGoal(state) );
         System.out.println("AGENT - Goal achieved");
     }
 
@@ -71,10 +71,12 @@ public class Agent {
 
     private void updateSequence(){
         //uses sequence and state to update sequence
-        System.out.println("Updating objective list");
+
         if(sequence.size()>0) {
-            if (sequence.get(0).getStart().equals(state)) {
+            //System.out.println(sequence.get(0).getStart().getName()+" - "+state.getName());
+            if (sequence.get(0).getEnd().equals(state)) {
                 sequence.remove(0);
+                System.out.println("AGENT - Updating objective list");
             }
         }
     }
